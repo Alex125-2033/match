@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduQuest Match — геймифицированный образовательный веб-портал</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="hero">
+    <nav class="nav container">
+      <div class="brand">
+        <div class="brand-badge">XP</div>
+        <span>EduQuest Match</span>
+      </div>
+      <div class="nav-links">
+        <a href="#about">О проекте</a>
+        <a href="#mechanics">Геймификация</a>
+        <a href="#architecture">Архитектура</a>
+        <a href="#games">Мини-игры</a>
+        <a href="#conference">Доклад</a>
+      </div>
+    </nav>
+
+    <div class="hero-content container">
+      <div class="hero-text">
+        <p class="eyebrow">Дни науки · СамГТУ · 2026</p>
+        <h1>Проектирование и разработка <span>геймифицированного образовательного</span> веб-портала</h1>
+        <p class="lead">
+          Объединённая версия сайта: на одной странице работают и демонстрационные элементы
+          образовательного портала, и обучающие мини-игры в стиле исходного сайта «match».
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#games">Открыть мини-игры</a>
+          <a class="btn btn-secondary" href="#conference">Тезисы доклада</a>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <span>Студенты</span>
+            <strong>Клычков Александр,
+                  Голов Владислав, 
+                  Чухвичев Иван
+            </strong>
+          </div>
+          <div>
+            <span>Руководитель</span>
+            <strong>ст. преп. Рубцова Т.П.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel glass">
+        <div class="panel-top">
+          <div>
+            <span class="mini-label">Уровень студента</span>
+            <h3>Level <span id="levelValue">5</span> · Исследователь</h3>
+          </div>
+          <div class="xp-pill">XP: <span id="xpValue">420</span></div>
+        </div>
+        <div class="progress-block">
+          <div class="progress-meta">
+            <span>Прогресс курса</span>
+            <span id="progressLabel">84%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill dynamic" id="dynamicFill"></div></div>
+        </div>
+        <div class="achievements">
+          <div class="achievement-card">
+            <div class="icon">🏆</div>
+            <div><strong>Без ошибок</strong><span>Тест пройден на 100%</span></div>
+          </div>
+          <div class="achievement-card">
+            <div class="icon">⚡</div>
+            <div><strong>Серия 7 дней</strong><span>Ежедневная активность</span></div>
+          </div>
+          <div class="achievement-card">
+            <div class="icon">🤝</div>
+            <div><strong>Командный модуль</strong><span>2 парные лабораторные</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">Актуальность исследования</p>
+        <h2>Почему такой портал действительно нужен</h2>
+      </div>
+      <div class="grid-3">
+        <article class="card glass">
+          <h3>Проблема онлайн-обучения</h3>
+          <p>Главная трудность дистанционного формата — не отсутствие контента, а падение мотивации и снижение вовлечённости студентов.</p>
+        </article>
+        <article class="card glass">
+          <h3>Фокус проекта</h3>
+          <p>Проект предлагает превратить изучение темы в понятный маршрут с заданиями, уровнями, наградами и наглядным прогрессом.</p>
+        </article>
+        <article class="card glass">
+          <h3>Практическая польза</h3>
+          <p>Студент получает мотивацию и обратную связь, преподаватель — аналитику, рейтинг и инструменты сопровождения.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contrast">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Теоретическая основа</p>
+          <h2>Три основания грамотной геймификации</h2>
+          <p class="muted">
+            В концепции проекта использована теория самодетерминации:
+            человеку важно чувствовать компетентность, автономию и связанность с другими участниками.
+          </p>
+        </div>
+        <div class="pillars">
+          <div class="pillar glass">
+            <span>01</span>
+            <h3>Компетентность</h3>
+            <p>Уровни, очки опыта, достижения и разблокировка сложных заданий.</p>
+          </div>
+          <div class="pillar glass">
+            <span>02</span>
+            <h3>Автономия</h3>
+            <p>Выбор заданий, темпа обучения и собственной траектории прохождения.</p>
+          </div>
+          <div class="pillar glass">
+            <span>03</span>
+            <h3>Взаимодействие</h3>
+            <p>Рейтинги, командные задания, турниры и совместные активности.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mechanics" class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">Механики мотивации</p>
+        <h2>Как работает геймификация в портале</h2>
+      </div>
+      <div class="mechanics-grid">
+        <article class="feature glass">
+          <div class="feature-icon">📈</div>
+          <h3>Опыт и уровни</h3>
+          <p>За каждое выполненное задание начисляется XP. Новый уровень открывает доступ к следующим модулям.</p>
+        </article>
+        <article class="feature glass">
+          <div class="feature-icon">🎖️</div>
+          <h3>Достижения</h3>
+          <p>Ачивменты выдаются за точность, скорость, регулярность и успешное прохождение модулей.</p>
+        </article>
+        <article class="feature glass">
+          <div class="feature-icon">🌐</div>
+          <h3>Социальное взаимодействие</h3>
+          <p>Рейтинг потока поддерживает здоровую конкуренцию, а парные активности развивают сотрудничество.</p>
+        </article>
+        <article class="feature glass">
+          <div class="feature-icon">🧠</div>
+          <h3>Персонализация</h3>
+          <p>Система видит, где студент затрудняется, и предлагает повтор теории или дополнительные задания.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="architecture" class="section dark-section">
+      <div class="container">
+        <div class="section-heading light">
+          <p class="eyebrow">Техническая часть</p>
+          <h2>Архитектура и стек технологий</h2>
+        </div>
+        <div class="architecture">
+          <div class="arch-box front">Frontend<br><span>HTML / CSS / JavaScript</span></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-box back">Логика<br><span>Геймификация + мини-игры</span></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-box data">Данные<br><span>Прогресс, уровни, задания</span></div>
+        </div>
+        <div class="requirements grid-3">
+          <article class="card dark-card">
+            <h3>Интерфейс</h3>
+            <p>Интуитивная навигация, чтобы студент быстро включался в работу и видел прогресс.</p>
+          </article>
+          <article class="card dark-card">
+            <h3>Аналитика</h3>
+            <p>Преподаватель видит слабые темы, активность и результаты прохождения заданий.</p>
+          </article>
+          <article class="card dark-card">
+            <h3>Гибкость</h3>
+            <p>Портал можно расширять новыми модулями, курсами и игровыми сценариями.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">Интерактивная демонстрация</p>
+        <h2>Обучающие мини-игры, встроенные в портал</h2>
+        <p class="muted">Этот блок объединяет идею доклада и функциональность сайта match: мини-игры работают прямо внутри портала.</p>
+      </div>
+
+      <div class="games-nav">
+        <button class="tab-btn active" data-tab="memory">Игра 1: Память</button>
+        <button class="tab-btn" data-tab="fractions">Игра 2: Дроби</button>
+        <button class="tab-btn" data-tab="expression">Игра 3: Выражения</button>
+      </div>
+
+      <div class="game-panel glass active" id="tab-memory">
+        <div class="game-head">
+          <div>
+            <h3>Игра на память</h3>
+            <p>Переворачивайте карточки и находите пары одинаковых чисел.</p>
+          </div>
+          <button class="btn btn-secondary small" id="memoryReset">Новая игра</button>
+        </div>
+        <div class="mini-stats">
+          <span>Ходы: <strong id="memoryMoves">0</strong></span>
+          <span>Найдено пар: <strong id="memoryPairs">0</strong></span>
+        </div>
+        <div class="memory-grid" id="memoryGrid"></div>
+      </div>
+
+      <div class="game-panel glass" id="tab-fractions">
+        <div class="game-head">
+          <div>
+            <h3>Игра с дробями</h3>
+            <p>Сложите две дроби и введите ответ в виде правильной дроби.</p>
+          </div>
+        </div>
+        <div class="fraction-box">
+          <div class="fraction-task" id="fractionTask"></div>
+          <div class="fraction-inputs">
+            <input type="number" id="fracNum" placeholder="числитель" />
+            <span>/</span>
+            <input type="number" id="fracDen" placeholder="знаменатель" />
+          </div>
+          <div class="fraction-actions">
+            <button class="btn btn-primary small" id="checkFraction">Проверить</button>
+            <button class="btn btn-secondary small" id="nextFraction">Следующее задание</button>
+          </div>
+          <div class="mini-stats">
+            <span>Правильно: <strong id="fractionCorrect">0</strong></span>
+            <span>Всего: <strong id="fractionTotal">0</strong></span>
+          </div>
+          <p class="answer-note" id="fractionMsg"></p>
+        </div>
+      </div>
+
+      <div class="game-panel glass" id="tab-expression">
+        <div class="game-head">
+          <div>
+            <h3>Игра «Собери выражение»</h3>
+            <p>Используйте числа и знаки действий, чтобы получить указанный результат.</p>
+          </div>
+          <button class="btn btn-secondary small" id="nextExpression">Новое задание</button>
+        </div>
+        <div class="expression-wrap">
+          <p class="target">Цель: получить число <strong id="exprTarget">10</strong></p>
+          <div class="chip-row" id="exprChips"></div>
+          <input type="text" id="exprInput" placeholder="Например: 8+2" />
+          <div class="fraction-actions">
+            <button class="btn btn-primary small" id="checkExpression">Проверить выражение</button>
+          </div>
+          <p class="answer-note" id="exprMsg"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="conference" class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">Под конференционное выступление</p>
+        <h2>Что можно сказать при показе сайта</h2>
+      </div>
+      <div class="two-col">
+        <div class="conference-points glass">
+          <ul>
+            <li>Главная проблема дистанционного обучения — потеря мотивации.</li>
+            <li>Портал превращает обучение в понятный маршрут с очками, уровнями и достижениями.</li>
+            <li>Теоретическая база опирается на компетентность, автономию и взаимодействие.</li>
+            <li>Мини-игры показывают, как игровые механики могут работать на практике.</li>
+            <li>Такой подход повышает вовлечённость и делает обучение нагляднее.</li>
+          </ul>
+        </div>
+        <div class="dashboard glass">
+          <aside class="sidebar">
+            <div class="user-box">
+              <div class="avatar">AK</div>
+              <div>
+                <strong>Александр</strong>
+                <span>2 курс · 24-НФ-109</span>
+              </div>
+            </div>
+            <ul>
+              <li class="active">Панель прогресса</li>
+              <li>Курсы</li>
+              <li>Достижения</li>
+              <li>Рейтинг</li>
+              <li>Командные задания</li>
+            </ul>
+          </aside>
+          <div class="dashboard-content">
+            <div class="dashboard-top">
+              <div>
+                <p class="eyebrow">Личный кабинет</p>
+                <h3>Демо образовательного маршрута</h3>
+              </div>
+              <button class="btn btn-primary small" id="gainXp">Выполнить задание +25 XP</button>
+            </div>
+            <div class="stats-row">
+              <div class="stat-card"><span>Текущий XP</span><strong id="xpMirror">420</strong></div>
+              <div class="stat-card"><span>Уровень</span><strong id="levelMirror">5</strong></div>
+              <div class="stat-card"><span>Пройдено модуля</span><strong>12</strong></div>
+            </div>
+            <div class="progress-block large">
+              <div class="progress-meta">
+                <span>Общий прогресс</span>
+                <span id="progressMirror">84%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill dynamic" id="dynamicFillMirror"></div></div>
+            </div>
+            <div class="badge-row">
+              <div class="badge-card">🏅 Теория освоена</div>
+              <div class="badge-card">🔥 Серия активности</div>
+              <div class="badge-card">🧩 Игры пройдены</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>EduQuest Match · объединённая версия сайта под доклад</span>
+      <span>Для GitHub Pages: замените файлы репозитория на этот комплект</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
